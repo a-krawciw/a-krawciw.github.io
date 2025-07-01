@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Happy Birthday</title>
+    <style media="all" type="text/css">
+
+
+
+
+@font-face {
+  font-family: 'Norican';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Norican Regular'), local('Norican-Regular'), url(https://themes.googleusercontent.com/static/fonts/norican/v1/WG5BKl7e-3DIN75Tz4bREg.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Bilbo Swash Caps';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bilbo Swash Caps'), local('BilboSwashCaps-Regular'), url(https://themes.googleusercontent.com/static/fonts/bilboswashcaps/v4/UB_-crLvhx-PwGKW1oosDpbko4ywDBcg2f1uYutDOWY.woff) format('woff');
+}
+
+ 
+.open{
+  position:absolute;
+  bottom: 140px;
+  left:50%;
+  margin-left:-175px;
+  margin-top:-105px;
+  width:0;
+  height:0;
+  border:solid 175px transparent;
+  border-top:solid 105px #d8d6d6;
+  border-bottom:none;
+  z-index: 5;
+  transform-origin: 50% 0;
+
+  transform: perspective(500);
+
+  transition: all 2.0s linear;
+}
+
+.envelope > p{
+  position:absolute;
+  right:15px;
+  bottom:25px;
+  font-family: 'Norican';
+  color:#cc008f;
+  font-size:15px;
+}
+ 
+.envelope  span{
+  font-family: 'Bilbo Swash Caps';
+  font-weight:bold;
+  color:#00cc3d;
+}
+
+ 
+.envelope > p:nth-child(2){
+  bottom:0;
+}
+
+.envelope{
+  position:absolute;
+  left:50%;
+  bottom: 35px;
+  width: 350px;
+  height:210px;
+  margin-left:-175px;
+  margin-top:-105px;
+  background: #EBEBEB;
+  /* background: linear-gradient(90deg, #EBEBEB 0%, #F7F7F7 50%);
+  box-shadow:0 1px 5px -2px black; */
+  z-index: 3;
+
+}
+ 
+
+.content{
+  position:absolute;
+  bottom: 200px;
+  left:50%;
+  margin-left:-150px;
+  margin-top:-300px;
+  width:300px;
+  height:0;
+  overflow:hidden;
+  background:#00698C;
+ 
+  background-size: 30px 30px, 100% 30px, 30px 100%;
+  z-index:1;
+  transition: all 1s linear;
+
+}
+ 
+.content > p{
+  width: 280px;
+  margin:0 auto;
+  font-family: 'Bilbo Swash Caps';
+  text-align:left;
+  font-size:20px;
+  color:#FFF;
+  text-shadow:1px 1px 0 black;
+  text-align:justify;
+}
+
+.content > p:nth-child(2){
+  font-family: 'Norican';
+  font-size:20px;
+  line-height:30px;
+  text-align:center;
+}
+
+.content > p:nth-child(4){
+  font-family: 'Norican';
+  font-size:20px;
+  line-height:30px;
+  text-align:right;
+}
+
+.envelope:hover + .open{
+  transform: rotateX(180deg);
+  z-index: 1;
+}
+ 
+.envelope:hover ~ .content{
+  transition: all 1s 2s linear;
+  height: 450px;
+  /* margin-top:-300px; */
+  opacity:1;
+}
+
+.envelope:before {
+  display: block;
+  position: absolute;
+  top: 65%;
+  left: -2%;
+  content: "";
+  background-color: transparent;
+  width: 80px;
+  height: 43px;
+  border-radius: 1%;
+
+  transform: matrix(2.13,-0.23,0.33,1.68,0,0);
+  transform-origin: center;
+}
+
+.envelope:after {
+  display: block;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  content: "";
+  background-color: transparent;
+  width: 80px;
+  height: 43px;
+  border-radius: 1%;
+
+  transform: matrix(-2.17,-0.16,-0.22,1.71,0,0);
+
+  transform-origin: center;
+}
+
+.info {
+  position: absolute;
+  color: #b6b1b1;
+  align-content: center;
+  text-align: center;
+  top: 5%;
+  width: 100%;
+}
+
+</style>
+</head>
+<body>
+  <div class="info">Click to open</div>
+<div class="envelope">
+  <p>To: <span>Evelyn</span></p>
+  <p>From: <span>Alec</span></p>
+</div>
+  <div class="open"></div>
+  <div class="content">
+  <p>My dear,</p>
+  <p>Happy Birthday 🎂🎂🎂. Wish you were here for a combo birthday + 🇨🇦 day. Your cake will have to wait until August... Maybe we can eat it with some tea in our forthcoming cute, couple mugs from <a href="https://montycreativestudio.com/">Monty Creative Studio</a>.</p>
+      <img src="clay.png" style="position:relative; display:block; width:60%; left:10%;"/>
+  <p>~ Love Alec</p>
+ </div>
+</body>
+</html>
